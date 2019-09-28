@@ -1,0 +1,51 @@
+{
+  "name": "js-experiments",
+  "version": "0.1.0",
+  "description": "Experiments running JavaScript with different dependencies, in different environments and setups.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "debug": "node --inspect-brk --inspect=0.0.0.0:9229 src/index.js",
+    "start-esm": "node -r esm src/index.js",
+    "start-babel": "babel-node src/index.js",
+    "build": "npx babel src -d build",
+    "run-build": "node build/index.js",
+    "debug-build": "node --inspect-brk --inspect=0.0.0.0:9229 build/index.js",
+    "build-and-debug": "npm-run-all build debug-build",
+    "dev": "nodemon --exec babel-node src/index.js",
+    "check-circular": "madge --circular src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexyk/js-experiments.git"
+  },
+  "keywords": [
+    "javascript",
+    "experiments",
+    "nodejs",
+    "esm",
+    "dotenv"
+  ],
+  "author": "Alex K",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexyk/js-experiments/issues"
+  },
+  "homepage": "https://github.com/alexyk/js-experiments#readme",
+  "dependencies": {
+    "dotenv": "8.1.0",
+    "js-tools": "github:alexyk/js-tools#v0.1.0-es5",
+    "moment": "2.24.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.6.2",
+    "@babel/core": "7.6.2",
+    "@babel/node": "7.6.2",
+    "@babel/plugin-proposal-class-properties": "7.5.5",
+    "@babel/preset-env": "7.6.2",
+    "@babel/runtime": "7.6.2",
+    "esm": "3.2.25",
+    "nodemon": "1.19.2",
+    "npm-run-all": "4.1.5"
+  }
+}

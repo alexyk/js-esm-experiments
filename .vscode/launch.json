@@ -1,0 +1,112 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "ESM: Run",
+      "args": ["-r", "esm", "${workspaceFolder}/src/index.js"],
+      "console": "internalConsole"
+    },
+
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Babel: Run",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "start-babel"],
+      "console": "internalConsole"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Nodemon: Run with babel",
+      "args": ["--exec", "babel-node", "${workspaceFolder}/src/index.js"],
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/nodemon"
+    },
+    {
+      "type": "node",
+      "name": "---------------------------"
+    },    
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Normal: Run",
+      "args": ["${workspaceFolder}/src/index.js"] 
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Normal: Run with debug",
+      "runtimeExecutable": "node",
+      "env": {
+        "NODE_DEBUG": "true"
+      },
+      "runtimeArgs": ["${workspaceFolder}/src/index.js"],
+      "console": "internalConsole" 
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Babel: Debug Build",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "debug-build"],
+      "console": "integratedTerminal"
+
+    },    
+    {
+      "type": "node",
+      "name": "---------------------------"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Babel: Build",
+      "runtimeExecutable": "npm",
+      "args": ["run", "build"] 
+
+    },
+    
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Babel: Build & Debug",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "build-and-debug"],
+      "console": "integratedTerminal"
+
+    },
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Babel: Build & Run",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["npm-run-all", "build", "run-build"],
+      "console": "integratedTerminal"
+
+    },
+    {
+      "type": "node",
+      "name": "---------------------------"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Nodemon: Run with esm",
+      "args": ["-r", "esm", "${workspaceFolder}/src/index.js"],
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/nodemon"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Nodemon: Normal run",
+      "args": ["${workspaceFolder}/src/index.js"],
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/nodemon"
+    }
+  ]
+}
