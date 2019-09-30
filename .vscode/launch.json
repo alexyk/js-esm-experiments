@@ -97,7 +97,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Nodemon: Run with esm",
+      "name": "Nodemon: Run with Esm",
       "args": ["-r", "esm", "${workspaceFolder}/src/index.js"],
       "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/nodemon"
     },
